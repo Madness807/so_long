@@ -6,16 +6,23 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:53:20 by joterret          #+#    #+#             */
-/*   Updated: 2022/10/27 00:30:38 by joterret         ###   ########.fr       */
+/*   Updated: 2022/12/27 18:29:48 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <sys/stat.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <string.h>
+# include "./get_next_line/get_next_line.h"
+
 
 // Partie_1/////////////////////////////////////////////////////////////////
 

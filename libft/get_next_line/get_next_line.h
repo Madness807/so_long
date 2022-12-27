@@ -6,7 +6,7 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 03:08:18 by joterret          #+#    #+#             */
-/*   Updated: 2022/12/14 20:00:57 by joterret         ###   ########.fr       */
+/*   Updated: 2022/12/27 18:30:28 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,7 @@
 # define GET_NEXT_LINE_H
 
 //NOTE - Includes 
-# include <unistd.h>
-# include <stdio.h>
-# include <fcntl.h>
-# include <sys/types.h>
-# include <sys/uio.h>
-# include <sys/stat.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
+# include "../libft.h"
 
 //NOTE - Buffer size
 # ifndef BUFFER_SIZE
@@ -34,6 +26,7 @@ char	*get_next_line(int fd);
 char	*gnl_getline(char *stock);
 char	*gnl_update_stock(char *stock);
 char	*gnl_read_stock(int fd, char *stock);
+
 //NOTE - Utils
 size_t	gnl_strlen(const char *str);
 int		gnl_strchr(char *str, int c);

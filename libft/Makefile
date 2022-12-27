@@ -48,6 +48,9 @@ SRCS	=	ft_atoi.c \
 			./ft_printf/utils_ft_printf/ft_print_pourcent.c\
 			./ft_printf/utils_ft_printf/ft_putnbr_ub10.c\
 			./ft_printf/utils_ft_printf/ft_checkstr.c\
+			./get_next_line/get_next_line.c\
+			./get_next_line/get_next_line_utils.c\
+
 
 
 OBJS	= ${SRCS:.c=.o}
