@@ -48,8 +48,9 @@ MSHELL			=		echo "$(GREEN) \t     __  ______    ____  _   __________________\n\
 
 #***** Flags *****#
 
-CC				=		gcc
-CFLAGS			=		-Wall -Wextra -Werror -g -framework OpenGL -framework AppKit
+GCC				=		gcc -g
+MINILBX			=		-Lmlx -lmlx -framework OpenGL -framework AppKit
+CFLAGS			=		-Wall -Wextra -Werror
 L				=		$(CFLAGS) -fsanitize=address
 RM				=		rm -f
 
@@ -77,13 +78,13 @@ logo :
 #			@$(END_COMP)
 
 $(NAME) :
-			$(CC) $(SRC) $(LIBFT) $(FLAGS) -o $(NAME)
+			$(GCC) $(FLAGS) $(SRC) $(LIBFT) $(MINILBX) -o $(NAME)
 			echo "TA DARONNE !\n"
 
 l :
 			@$(MLIBFT)
 			@$(MMLX)
-			$(CC) $(SRC) $(LIBFT) $(L) -o $(NAME)
+			$(GCC) $(L) $(SRC) $(LIBFT) $(MINILBX) -o $(NAME)
 
 #l :			${OBJS}
 #			${MLIBFT} all
