@@ -6,7 +6,7 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:57 by joterret          #+#    #+#             */
-/*   Updated: 2022/12/27 18:54:00 by joterret         ###   ########.fr       */
+/*   Updated: 2022/12/28 19:01:42 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,10 @@ typedef struct s_player
 }t_player;
 
 typedef struct s_map
-{
-	int fd_map;
-	int tab_map_x;
-	int tab_map_y;
-	char **tab;
+{	
+	int size_map_x;
+	int size_map_y;
+	char **tab_map;
 }t_map;
 
 //NOTE - Fonction principal
@@ -44,7 +43,7 @@ typedef struct s_map
 
 //NOTE - Fonction utils
 
-int		check_tab_size()
+int		check_tab_size();
 
 //NOTE - Fonction de gestion graphique
 

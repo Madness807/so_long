@@ -83,9 +83,6 @@ BS_N			=		echo "\n"
 
 #***** Compilation *****#
 
-.c.o:
-		@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
-		@echo "$(BLUE)    $(ENDCOLOR)\c"
 
 all: 	start ${NAME}
 
@@ -94,7 +91,7 @@ start:
 
 %.o: %.c
 		@${CC} ${CFLAGS} -c $< -o $@
-		@$(CHARG_LINE)
+		@printf "${GREEN}%-50s\r${ENDCOLOR}" $@
 
 ${NAME}: ${OBJS}
 		@$(BS_N)

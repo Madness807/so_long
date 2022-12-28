@@ -79,7 +79,7 @@ logo :
 
 $(NAME) :
 			$(GCC) $(FLAGS) $(SRC) $(LIBFT) $(MINILBX) -o $(NAME)
-			echo "TA DARONNE !\n"
+			
 
 l :
 			@$(MLIBFT)
