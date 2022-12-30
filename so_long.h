@@ -6,25 +6,25 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:57 by joterret          #+#    #+#             */
-/*   Updated: 2022/12/28 19:01:42 by joterret         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:15:44 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-//NOTE - Librairie
+// LIBRAIRIE
 #include "./libft/libft.h"
 #include "./mlx/mlx.h"
 #include <stdio.h>
 
-//NOTE - Touches de deplacement
+// TOUCHE DE DEPLACEMENT
 # define KEY_UP 	119
 # define KEY_RIGHT	97
 # define KEY_DOWN	115
 # define KEY_LEFT	100
 
-//NOTE - Structures
+// STRUCTURES
 typedef struct s_player
 {
 	int pos_player_x;
@@ -38,14 +38,12 @@ typedef struct s_map
 	char **tab_map;
 }t_map;
 
-//NOTE - Fonction principal
+// MAP
 
 
-//NOTE - Fonction utils
 
-int		check_tab_size();
+// JOUEUR
 
-//NOTE - Fonction de gestion graphique
 
 
 #endif

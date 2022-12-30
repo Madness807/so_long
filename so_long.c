@@ -6,7 +6,7 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:52 by joterret          #+#    #+#             */
-/*   Updated: 2022/12/28 20:53:53 by joterret         ###   ########.fr       */
+/*   Updated: 2022/12/29 17:36:04 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,56 +15,51 @@
 int	main(int argc, char *argv[])
 {
 	(void)argc;
-	//void *mlx_ptr;
-	//void *win_ptr;
+	void *mlx_ptr;
+	void *win_ptr;
 	char *line;
 	t_map data;
 	int fd;
+	int i;
 
-	fd = open(argv[1], O_RDONLY);
-	
-	//NOTE - Initialisation des variables
 	line = "";
 	data.size_map_y = 0;
 	data.size_map_x = 0;
 	
-	//NOTE - Lecture de la map pour connaitre ca taille
+	fd = open(argv[1], O_RDONLY);
+	
 	while (line)
 	{	
 		line = get_next_line(fd);
-		data.size_map_x++;
 		data.size_map_y++;
 	}
-	
 	data.tab_map = malloc(data.size_map_y * sizeof(char*));
-	while (i < data.size_map_x)
-	{
-		
-
-
-	}
-
-	//NOTE - Lecture de la map pour connaitre ca taille
-	int i;
-
+	close(fd);
+	
+	
 	i = 0;
-	while (line)
-	{
-		line = get_next_line(fd);
-		data.tab_map[i] = line;
-		printf("ta map en string%s\n", data.tab_map[i]);
+	open(argv[1], O_RDONLY);
+	while (i < data.size_map_y -1)
+	{		
+		data.tab_map[i] = get_next_line(fd);
+		printf("Ligne du tableau = %s\n", data.tab_map[i]);//REVIEW - 
 		i++;
 	}
+	close (fd);
 	
-	//NOTE - FESTIVAL DU TEST
-	printf("\n");
-	printf("taille y = %d\n", data.size_map_y);
-	printf("la map en str = %c\n", data.tab_map[0][3]);
+	int x = 100;
+	int y = 100;
 
-	//NOTE - Partie graphique
-	//mlx_ptr = mlx_init();
-	//win_ptr = mlx_new_window(mlx_ptr, 640, 480, "Ma fenetre");
-
-	//mlx_loop(mlx_ptr);
+	//NOTE - PARTIE GRAPHIQUE
+	i = 0;
+	mlx_ptr = mlx_init();
+	win_ptr = mlx_new_window(mlx_ptr, 640, 480, "Ma fenetre");
+	while (i < data.size_map_y - 1)
+	{
+		mlx_string_put(mlx_ptr, win_ptr, x, y, 0x1C6EA4, data.tab_map[i]);
+		y++;
+		i++;
+	}
+	mlx_loop(mlx_ptr);
 	return (0);
 }
