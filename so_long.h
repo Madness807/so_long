@@ -6,7 +6,7 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:57 by joterret          #+#    #+#             */
-/*   Updated: 2022/12/29 15:15:44 by joterret         ###   ########.fr       */
+/*   Updated: 2023/01/03 17:20:51 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,19 @@
 # define KEY_DOWN	115
 # define KEY_LEFT	100
 
+// Sprite
+# define SIZE 32
+
+# define FLOOR	"./sprites/floor.xpm"
+# define WALL_UP	"./sprites/wall_up.xpm"
+# define ITEM	"./sprites/item.xpm"
+
 // STRUCTURES
 typedef struct s_player
 {
 	int pos_player_x;
 	int pos_player_y;
+	
 }t_player;
 
 typedef struct s_map
@@ -36,14 +44,23 @@ typedef struct s_map
 	int size_map_x;
 	int size_map_y;
 	char **tab_map;
+	
 }t_map;
 
-// MAP
+typedef struct s_assets
+{
+	int pos_player_x;
+	int pos_player_y;
+
+	int pos_item_1;
+	int pos_item_2;
+	
+	int pos_ennemy_1;
+}t_assets;
 
 
-
-// JOUEUR
-
+// Utils
+void	put_sprite(void *ptr_mlx, void *ptr_win, char *sprite_path, int i, int j);
 
 
 #endif

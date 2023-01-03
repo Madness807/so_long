@@ -5,6 +5,7 @@ NAME			=		so_long
 #***** Sources / Objs *****#
 
 SRC				=		so_long.c \
+						put_sprite.c \
 
 OBJS			=		$(SRC:.c=.o)
 
@@ -19,6 +20,7 @@ MLIBFT			=		@$(MAKE) -C libft
 
 MLX				=		./mlx/libmlx.a
 MMLX			=		@$(MAKE) -C mlx
+
 
 #***** Couleurs *****#
 
