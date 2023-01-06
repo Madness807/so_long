@@ -6,12 +6,18 @@
 /*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:52 by joterret          #+#    #+#             */
-/*   Updated: 2023/01/04 21:16:07 by joterret         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:26:22 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+int	handle_key_event(int code, void *param)
+{
+	(void)param;
+	printf("%d\n", code);
+	return (0);
+}
 
 int	main(int argc, char *argv[])
 {
@@ -35,7 +41,8 @@ int	main(int argc, char *argv[])
 		line = get_next_line(fd);
 		data.size_map_y++;
 	}
-	data.tab_map = malloc(data.size_map_y * sizeof(char*));
+	
+	data.tab_map = malloc((data.size_map_y) * sizeof(char*));
 	close(fd);
 	
 	
@@ -50,13 +57,14 @@ int	main(int argc, char *argv[])
 	
 	data.size_map_x = (int)ft_strlen(data.tab_map[i - 1]);
 
+	//TODO - Verifier que la map et rectangle et jouable
 	
 	//NOTE - PARTIE GRAPHIQUE
 	i = 0;
 	j = 0;
 
 	mlx_ptr = mlx_init();//NOTE - 
-	win_ptr = mlx_new_window(mlx_ptr, data.size_map_x * SIZE, data.size_map_y * SIZE, "Ma fenetre");//NOTE - ouvre la fenetre a la bonne taille
+	win_ptr = mlx_new_window(mlx_ptr, data.size_map_x * SIZE, (data.size_map_y - 1 )* SIZE, "Ma fenetre");//NOTE - ouvre la fenetre a la bonne taille
 	
 	while (i < data.size_map_y - 1)
 	{	
@@ -82,7 +90,8 @@ int	main(int argc, char *argv[])
 		}
 		i++;
 	}
-	mlx_hook(win_ptr, 17, 0, &exit_game, &data);
+
+	mlx_key_hook(win_ptr, handle_key_event, 0);
 	mlx_loop(mlx_ptr);
 	return (0);
 }
