@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:57 by joterret          #+#    #+#             */
-/*   Updated: 2023/01/10 01:03:35 by joterret         ###   ########.fr       */
+/*   Updated: 2023/01/10 03:04:35 by joterrett        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 # define KEY_CLOSE_WINDOW 	53
 
 // Sprite []
-# define SIZE 32
+# define SIZE 				32
 # define FLOOR				"./sprites/floor.xpm"
 # define WALL				"./sprites/wall.xpm"
 # define ITEM				"./sprites/item.xpm"
@@ -69,6 +69,7 @@ typedef struct s_solong
 {
 	t_mlx mlx;
 	t_map map;
+	
 }t_solong;
 
 // Utils
