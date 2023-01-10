@@ -7,6 +7,7 @@ NAME			=		so_long
 SRC				=		so_long.c \
 						put_sprite.c \
 						exit.c \
+						moove_player.c\
 
 OBJS			=		$(SRC:.c=.o)
 
