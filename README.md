@@ -10,7 +10,7 @@ l’école, soit en l’installant par les sources.
 - ✅ Les touches W, A, S et D doivent être utilisées afin de mouvoir le personnage principal.
 - ✅ Le joueur doit être capable de se déplacer dans ces 4 directions : haut, bas, gauche, droite.
 - ✅ Le joueur ne doit pas pouvoir se déplacer dans les murs.
-- ❌ À chaque mouvement, le compte total de mouvement doit être affiché dans le shell.
+- ✅ À chaque mouvement, le compte total de mouvement doit être affiché dans le shell.
 - ✅ Vous devez utiliser une vue 2D (vue de haut ou de profil).
 - ✅ Le jeu n’a pas à être en temps réel.
 - ✅ Bien que les exemples donnés montrent un thème dauphin, vous êtes libre de créer l’univers que vous voulez.
