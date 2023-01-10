@@ -26,11 +26,11 @@ l’école, soit en l’installant par les sources.
 - ✅ La carte sera construite en utilisant 3 éléments : les murs, les items à collecter,
 	et l’espace vide.
 - ✅ Votre carte peut être composée de ces 5 caractères :
-	0 pour un emplacement vide,
-	1 pour un mur,
-	C pour un item à collecter (C pour collectible),
-	E pour une sortie (E pour exit),
-	P pour la position de départ du personnage.
+	- 0 pour un emplacement vide,
+	- 1 pour un mur,
+	- C pour un item à collecter (C pour collectible),
+	- E pour une sortie (E pour exit),
+	- P pour la position de départ du personnage.
 - ✅ La carte doit contenir 1 sortie, au moins 1 item et 1 position de départ.
 - ❌ Si la map contient des doublons, vous devez afficher un message d’erreur.
 - ❌ La carte doit être de forme rectangulaire.
