@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:52 by joterret          #+#    #+#             */
-/*   Updated: 2023/01/10 00:55:53 by joterret         ###   ########.fr       */
+/*   Updated: 2023/01/10 04:33:39 by joterrett        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,18 +90,3 @@ int	main(int argc, char *argv[])
 	return (0);
 }
 
-int	handle_key_event(int code, t_solong *solong)
-{
-		if (code == KEY_UP)
-			moove_up(solong);
-		if (code == KEY_DOWN)
-			moove_down(solong);
-		if (code == KEY_RIGHT)
-			moove_right(solong);
-		if (code == KEY_LEFT)
-			moove_left(solong);
-		if (code == KEY_CLOSE_WINDOW)
-			mlx_destroy_window(solong->mlx.mlx_ptr, solong->mlx.win_ptr);
-	
-	return (0);
-}

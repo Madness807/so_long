@@ -6,7 +6,7 @@
 /*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:57 by joterret          #+#    #+#             */
-/*   Updated: 2023/01/10 03:04:35 by joterrett        ###   ########.fr       */
+/*   Updated: 2023/01/10 04:33:37 by joterrett        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@
 
 
 // STRUCTURES
-
 typedef struct s_mlx
 {
 	void *mlx_ptr;
