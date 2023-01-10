@@ -6,7 +6,7 @@
 /*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:52 by joterret          #+#    #+#             */
-/*   Updated: 2023/01/10 04:33:39 by joterrett        ###   ########.fr       */
+/*   Updated: 2023/01/10 05:21:13 by joterrett        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int argc, char *argv[])
 	line = "";
 	solong.map.size_map_y = 0;
 	solong.map.size_map_x = 0;
+	solong.map.nbr_pas = 0;
 
 	fd = open(argv[1], O_RDONLY);
 	
@@ -86,6 +87,7 @@ int	main(int argc, char *argv[])
 	}
 
 	mlx_key_hook(solong.mlx.win_ptr, handle_key_event, &solong);
+	
 	mlx_loop(solong.mlx.mlx_ptr);
 	return (0);
 }

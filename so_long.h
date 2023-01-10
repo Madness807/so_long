@@ -6,7 +6,7 @@
 /*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 13:53:57 by joterret          #+#    #+#             */
-/*   Updated: 2023/01/10 04:33:37 by joterrett        ###   ########.fr       */
+/*   Updated: 2023/01/10 05:11:01 by joterrett        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ typedef struct s_map
 {	
 	int pos_player_x;
 	int pos_player_y;
+	int nbr_pas;
 	
 	int pos_item_1;
 	int pos_ennemy_1;
