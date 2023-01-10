@@ -6,7 +6,7 @@ l’école, soit en l’installant par les sources.
 - ✅ Votre programme doit prendre en paramètre un fichier de carte se terminant par l’extension .ber.
 
 ## Le jeu
-- ❌ Le but du joueur est de collecter tous les items présents sur la carte, puis de s’échapper en empruntant le chemin le plus court possible.
+- ✅ Le but du joueur est de collecter tous les items présents sur la carte, puis de s’échapper en empruntant le chemin le plus court possible.
 - ✅ Les touches W, A, S et D doivent être utilisées afin de mouvoir le personnage principal.
 - ✅ Le joueur doit être capable de se déplacer dans ces 4 directions : haut, bas, gauche, droite.
 - ✅ Le joueur ne doit pas pouvoir se déplacer dans les murs.
