@@ -17,7 +17,7 @@ l’école, soit en l’installant par les sources.
 
 ## Gestion graphique
 - ✅ Votre programme doit afficher une image dans une fenêtre.
-- ❌ La gestion de la fenêtre doit rester fluide (changer de fenêtre, la réduire, etc.).
+- ✅ La gestion de la fenêtre doit rester fluide (changer de fenêtre, la réduire, etc.).
 - ❌ Appuyer sur la touche ESC doit fermer la fenêtre et quitter le programme proprement.
 - ❌ Cliquer sur la croix en haut de la fenêtre doit fermer celle-ci et quitter le programme proprement.
 - ✅ Utiliser les images de la MiniLibX est obligatoire.
